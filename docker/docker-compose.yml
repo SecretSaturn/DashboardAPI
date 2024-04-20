@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  app:
+    image: app-shade-kujira-adapter:latest
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ../:/app
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../.env
