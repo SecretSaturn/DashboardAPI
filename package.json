@@ -1,22 +1,21 @@
 {
-  "name": "clear-text-query-adapter",
+  "name": "api-buffer",
   "version": "1.0.1",
-  "description": "Use this adapter to do clear text smart contract queries within Secret Network",
+  "description": "Buffer API for Secret Dashboard",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
     "build": "tsc",
-    "serve": "node dist/server.js"
+    "serve": "tsc && node dist/server.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "Secret Saturn",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.20",
-    "bignumber.js": "^9.1.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "secretjs": "^1.12.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
