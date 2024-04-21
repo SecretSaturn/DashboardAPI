@@ -38,6 +38,7 @@ const refreshData = async () => {
         prices = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${tokens}&vs_currencies=USD`)).json();
         currencies = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=usd&vs_currencies=eur,jpy,gbp,aud,cad,chf`)).json();
         volume = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=secret&vs_currencies=usd,eur,jpy,gbp,aud,cad,chf&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true`)).json();
+        console.log(`Data refreshed.`);
        // Chart1Day = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=usd&vs_currencies=eur,jpy,gbp,aud,cad,chf`)).json();
         //Chart1Month = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=usd&vs_currencies=eur,jpy,gbp,aud,cad,chf`)).json();
         //Chart1Year = await(await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=usd&vs_currencies=eur,jpy,gbp,aud,cad,chf`)).json();
